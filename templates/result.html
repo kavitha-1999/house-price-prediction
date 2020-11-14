@@ -1,0 +1,75 @@
+{% load static %}
+<html>
+<body>
+<title> RESULT </title>
+
+<style type="text/css">
+  
+  body{
+         background:url({% static 'images/prediction.jpg' %})50%50%;background-size:cover;
+     }
+     
+  .result{
+             
+             color: white;
+             background-color:rgba(103,69,73,0.8);
+             margin-left:500px;
+             font-size:10px;
+             width:300px;
+             padding:20px;
+                                          onclick="this.parentElement.style.display='none';"
+         }
+         
+  .alert {
+ 
+  padding:10px;
+  background-color: black ; 
+  color: white;
+  
+  width:300px;
+}                                   
+
+.button {background-color: #4CAF50;}
+
+</style>
+
+<body>
+
+ <div class="alert">
+<p style="text-align:center; font-size:20;" >To Check Out Properties <br> In Required Budget, Register <br> And Login With Us </p>
+ <br>
+  
+ <input type="submit"  value="OK" onclick="this.parentElement.style.display='none';" style="padding-left:30px;padding-right:30px;padding-top:5px;padding-bottom:5px; margin-left:90px; background-color: #4CAF50;">
+  
+</div>
+
+<div class="result">
+<p style="text-align:center; font-size:20px; ">  Prediction Report </p> <br>
+<h2>BEDROOM :        {{bed}}        </h2> 
+<h2>BATHROOM :       {{bathroom}}   </h2> 
+<h2>SQFT-LIVING :    {{sliving}}    </h2> 
+<h2>SQFT-ABOVE :     {{sabove}}     </h2> 
+<h2>YEAR-BUILT :     {{ybuilt}}     </h2> 
+<h2>YEAR-RENOVATED : {{yrenovated}} </h2> 
+<h2>VIEW :           {{view}}       </h2> 
+<h2>FLOORS :         {{floors}}      </h2> 
+<h2>LAT-AREA :       {{lat}}         </h2> 
+<h2>LONG-AREA :      {{long}}        </h2> 
+<h2>WATERFRONT :     {{waterfront}}  </h2> 
+<h2>GRADE :          {{grade}}       </h2> 
+<br>
+<h1 style="text-align:center;"> The Predicted Price For Above Search </h1>
+<br>
+<h2 style="text-align:center;">PRICE :     Rs. {{x}}           </h2> 
+</div>
+
+
+
+
+
+</body>
+</html>
+
+
+
+
